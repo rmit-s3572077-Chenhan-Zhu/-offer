@@ -90,9 +90,9 @@ public class Solution {
         }
         return str.toString();
     }
-}```
+}
 
-解法二：```
+解法二:
 public String replaceSpace(StringBuffer str) {
     	if(str==null) return null;
     	StringBuffer s = new StringBuffer();

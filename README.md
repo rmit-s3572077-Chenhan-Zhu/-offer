@@ -6,7 +6,7 @@
 利用二分查找，
 通过遍历每一行得到答案，
 时间复杂度是nlogn
-`public class Solution {
+```public class Solution {
     public boolean Find(int [][] array,int target) {
          
         for(int i=0;i<array.length;i++){
@@ -26,7 +26,7 @@
  
     }
 }
- `
+ ```
 另外一种思路是：
 利用二维数组由上到下，由左到右递增的规律，
 那么选取右上角或者左下角的元素a[row][col]与target进行比较，
@@ -34,7 +34,7 @@
 即col--；
 当target大于元素a[row][col]时，那么target必定在元素a所在列的下边,
 即row++；
-`
+```
 public class Solution {
     public boolean Find(int [][] array,int target) {
         int row=0;
@@ -50,5 +50,5 @@ public class Solution {
         return false;
  
     }
-}`
+}```
 ***

@@ -109,6 +109,22 @@ public String replaceSpace(StringBuffer str) {
 ```
 
 
+3.从头到尾打印链表：输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
+解法一
+```
+public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+		Stack<Integer> stack = new Stack<Integer>(); //借助于栈
+		while(listNode!=null) {
+			stack.push(listNode.val);
+			listNode=listNode.next;
+		}
+		 ArrayList<Integer> res = new  ArrayList<Integer>();
+		 while(!stack.isEmpty()) {
+			 int v=stack.pop();
+			 res.add(v);
+		 }
+		 return res;
+        
+    }
 
-
-
+```

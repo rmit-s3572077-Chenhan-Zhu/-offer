@@ -27,6 +27,7 @@
     }
 }
  ```
+ 
 另外一种思路是：
 利用二维数组由上到下，由左到右递增的规律，
 那么选取右上角或者左下角的元素a[row][col]与target进行比较，
@@ -34,6 +35,7 @@
 即col--；
 当target大于元素a[row][col]时，那么target必定在元素a所在列的下边,
 即row++；
+
 ```
 public class Solution {
     public boolean Find(int [][] array,int target) {
@@ -68,6 +70,9 @@ public class Solution {
       从后往前，先计算需要多少空间，然后从后往前移动，则每个字符只为移动一次，这样效率更高一点。
 */
 解法1：
+
+
+
 ```public class Solution {
     public String replaceSpace(StringBuffer str) {
         int spacenum = 0;//spacenum为计算空格数
@@ -131,6 +136,7 @@ public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 
 
 <h3>4.重建二叉树 ：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</h3>
+
 
 ```
 

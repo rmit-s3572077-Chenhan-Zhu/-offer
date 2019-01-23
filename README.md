@@ -463,3 +463,59 @@ public class Solution {
         return count;
     }
 ```    
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>数值的整数次方：给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。</h3>
+
+第一种
+```
+public double Power(double base, int exponent) {
+      
+        double res =1;
+        for(int i =0;i<Math.abs(exponent);i++){
+            res*=base;
+        }
+        if(exponent<0) {
+        	return 1/res;
+        }
+        return res;
+	  }
+
+```
+
+
+
+
+
+
+
+
+
+
+第二种
+
+```
+public:
+    double Power(double base, int exponent) {
+        long long p = abs((long long)exponent);
+      double r = 1.0;
+        while(p){
+            if(p & 1) r *= base;
+            base *= base;
+            p >>= 1;
+        }
+        return exponent < 0 ? 1/ r : r;
+    }
+```
+
+

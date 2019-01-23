@@ -96,7 +96,9 @@ public class Solution {
         return str.toString();
     }
 }
+```
 
+```
 解法二:
 public String replaceSpace(StringBuffer str) {
     	if(str==null) return null;
@@ -139,7 +141,6 @@ public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 
 
 ```
-
 public class Solution {
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);

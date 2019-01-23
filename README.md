@@ -401,8 +401,8 @@ target = n 分为两步考虑：
 
 
 
-```
 
+```
 public class Solution {
     public int RectCover(int target) {
       if(target  <= 1){
@@ -417,5 +417,4 @@ public class Solution {
         }
     }
 }
-
 ```

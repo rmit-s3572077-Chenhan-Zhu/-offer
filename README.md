@@ -329,7 +329,7 @@ public class Solution {
 
 <h3>7. 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。
 n<=39。</h3>
-
+```
 public class Solution {
     public int Fibonacci(int n) {
         int preNum=1;
@@ -347,5 +347,5 @@ public class Solution {
         return result;
  
     }
-}
+}```
 

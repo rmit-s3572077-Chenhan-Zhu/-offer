@@ -774,3 +774,26 @@ public class Solution {
         return doesTree1HaveTree2(node1.left,node2.left) && doesTree1HaveTree2(node1.right,node2.right);
     }
 ```
+
+
+
+
+
+<h3>16.树的镜像：
+操作给定的二叉树，将其变换为源二叉树的镜像。
+。
+</h3>
+```
+public void Mirror(TreeNode root) {
+        if (root==null) return;
+    	TreeNode temp =root.left;
+    	root.left=root.right;
+    	root.right=temp;
+    	Mirror(root.left);
+        Mirror(root.right);
+    	   
+       
+        
+        
+    }
+```

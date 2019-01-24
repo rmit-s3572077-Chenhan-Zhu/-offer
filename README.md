@@ -571,6 +571,23 @@ public class Solution {
 
 
 <h3>12.链表的倒数k个结点：输入一个链表，输出该链表中倒数第k个结点。</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 public ListNode FindKthToTail(ListNode head,int k) {
@@ -592,3 +609,30 @@ public ListNode FindKthToTail(ListNode head,int k) {
 
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+<h3>13.反转链表：输入一个链表，反转链表后，输出新链表的表头。
+</h3>
+```
+public class Solution {
+    public ListNode ReverseList(ListNode head) {
+        ListNode pre =null;
+        ListNode cur = head;
+        while(cur!=null){
+            ListNode next= cur.next;
+            cur.next=pre;
+            pre=cur;
+            cur=next;
+    }
+        return pre;
+}}
+```

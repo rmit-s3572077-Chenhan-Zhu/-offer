@@ -570,3 +570,25 @@ public class Solution {
 ```
 
 
+<h3>12.链表的倒数k个结点：输入一个链表，输出该链表中倒数第k个结点。</h3>
+```
+
+public ListNode FindKthToTail(ListNode head,int k) {
+        ListNode fast=head;
+        ListNode slow = head;
+        int count=0;
+        
+        while(fast!=null&&count!=k){
+            fast=fast.next;
+            count++;
+        }
+        while(fast!=null){
+            fast=fast.next;
+            slow=slow.next;
+        }
+        if(count<k) return null;
+        return slow;
+    }
+
+```
+

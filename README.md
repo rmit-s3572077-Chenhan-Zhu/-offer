@@ -540,8 +540,7 @@ public static void reOrderArray(int [] array) {
         if(array==null) return;
         int temp=0;
         for(int i = 1;i<array.length;i++) {
-        	temp=array[i];
-        	if(temp%2==1) {
+        	if(array[i]%2==1)  {
         	for(int j = i;j>0 ;j--) {
         		if(array[j-1]%2==0) {
         		int t =array[j];
@@ -552,6 +551,22 @@ public static void reOrderArray(int [] array) {
         }}
         
     }
+    
+    
+冒泡排序：
+
+public class Solution {
+    public void reOrderArray(int [] array) {
+        for(int i=0;i<array.length-1;i++)
+            for(int j=0;j<array.length-i-1;j++){
+                if(array[j]%2==0 && array[j+1]%2==1){
+                    int temp=array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=temp;
+                }
+            }
+    }
+}
 ```
 
 

@@ -638,3 +638,71 @@ public class Solution {
 }}
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>14.合并链表：输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
+。
+</h3>
+
+```
+方法1：
+
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        ListNode list= new ListNode(5);
+        ListNode l =list;
+        while (list1!=null&&list2!=null){
+            if(list1.val<list2.val){
+                    l.next=list1;
+                    list1=list1.next;
+            }
+            else if(list1.val>=list2.val){
+                    l.next=list2;
+                     list2=list2.next;
+
+            }
+            l=l.next;
+            
+        }
+        if(list1!=null) l.next=list1;
+        if(list2!=null) l.next=list2;
+        
+        return list.next;
+
+        
+            
+
+}
+}
+
+方法2：
+public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
+	        if(l1 == null) return l2;
+	        if(l2 == null) return l1;
+	        if(l1.val < l2.val){
+	            l1.next = mergeTwoLists(l1.next, l2);
+	            return l1;
+	        } else{
+	            l2.next = mergeTwoLists(l2.next, l1);
+	            return l2;
+	        }
+
+	    }
+```

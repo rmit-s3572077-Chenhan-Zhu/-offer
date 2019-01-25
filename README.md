@@ -981,10 +981,6 @@ public class Solution {
 
 </h3>
 
-
-链接：https://www.nowcoder.com/questionTerminal/d77d11405cc7470d82554cb392585106
-来源：牛客网
-
 【思路】借用一个辅助的栈，遍历压栈顺序，先讲第一个放入栈中，这里是1，然后判断栈顶元素是不是出栈顺序的第一个元素，这里是4，很显然1≠4，所以我们继续压栈，直到相等以后开始出栈，出栈一个元素，则将出栈顺序向后移动一位，直到不相等，这样循环等压栈顺序遍历完成，如果辅助栈还不为空，说明弹出序列不是该栈的弹出顺序。
 
 举例：
@@ -1036,3 +1032,46 @@ public class Solution {
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>18.从上往下打印出二叉树：
+从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+
+</h3>
+
+
+```
+public class Solution {
+   public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+	ArrayList<Integer> list =new ArrayList<Integer>();
+	if (root==null) return list;
+	Queue<TreeNode> queue = new LinkedList<TreeNode>();
+     queue.offer(root);
+     while(!queue.isEmpty()) {
+    	 TreeNode temp = queue.poll();
+    	 list.add(temp.val);
+    	 if(temp.left!=null) {
+    	 queue.offer(temp.left);}
+    	 if(temp.right!=null) {
+    	 queue.offer(temp.right);}
+     }
+     return list;
+     
+    }
+}
+
+
+```

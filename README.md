@@ -783,6 +783,7 @@ public class Solution {
 操作给定的二叉树，将其变换为源二叉树的镜像。
 。
 </h3>
+
 ```
 public void Mirror(TreeNode root) {
         if (root==null) return;
@@ -796,6 +797,7 @@ public void Mirror(TreeNode root) {
         
         
     }
+
 ```
 
 

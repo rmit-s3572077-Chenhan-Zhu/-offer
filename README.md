@@ -1285,7 +1285,7 @@ public class Solution {
 
 
 
-<h3>23.二叉搜索树转换成一个排序的双向链表
+<h3>24.二叉搜索树转换成一个排序的双向链表
 
 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。
 </h3>
@@ -1338,7 +1338,7 @@ public class Solution {
 
 
 
-<h3>23.字符串的排列
+<h3>25.字符串的排列
 
 输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则
 打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
@@ -1380,6 +1380,100 @@ public class Solution {
         cs[i] = cs[j];
         cs[j] = temp;
     }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>26.数组中出现次数超过一半的数字
+数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
+	例如输入一个长度为9的数组{1,2,3,2,2,2,5,4,2}。由于数字2在数组中出现了5次，
+	超过数组长度的一半，因此输出2。如果不存在则输出0。
+</h3>
+```
+
+
+```
+解法一：
+
+首先第一个for循环结束后得到的num是什么？如果这个数组中存在个数大于数组长度一半的数，
+那么这个num一定是这个数，因为数组中所有不是num的数，一定会被这个数覆盖，所以最后得到的数是num。
+但是，如果这个数组中根本不存在个数大于数组长度一半的数，那么这个num就是一个不确定的值，这也是为什么找出num之后，
+还要再做一次循环验证这个数出现的个数是不是大于数组长度一半的原因。
+class Solution {
+public:
+    int MoreThanHalfNum_Solution(vector<int> numbers) {
+        int n = numbers.size();
+        if (n == 0) return 0;
+         
+        int num = numbers[0], count = 1;
+        for (int i = 1; i < n; i++) {
+            if (numbers[i] == num) count++;
+            else count--;
+            if (count == 0) {
+                num = numbers[i];
+                count = 1;
+            }
+        }
+        // Verifying
+        count = 0;
+        for (int i = 0; i < n; i++) {
+            if (numbers[i] == num) count++;
+        }
+        if (count * 2 > n) return num;
+        return 0;
+    }
+};
+
+
+
+解法二：
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+public class Solution {
+   public static int MoreThanHalfNum_Solution(int [] array) {
+	      if(array==null ) return 0;
+         if(array.length==1)return 1;
+	      int max=0;
+	      HashMap<Integer,Integer> hs = new HashMap<Integer,Integer>();
+	      for(int i = 0 ;i<array.length;i++) {
+	    	  if(hs.containsKey(array[i])) { 
+	    		  hs.put(array[i],hs.get(array[i])+1);
+	    		  if(hs.get(array[i])>max) {
+	    			  max=hs.get(array[i]);
+//	    			  System.out.println(max);
+	    		  }
+	    		  
+	    	  }
+	    	  else {
+	    		  hs.put(array[i], 1);
+	    	  }
+	      }
+	      if(max>array.length/2) return 2;
+	      return 0;
+	    }
 }
 
 ```

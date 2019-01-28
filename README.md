@@ -1526,3 +1526,34 @@ public class Solution {
         return result;
     }
 ```
+
+
+
+
+
+<h3>28.连续子数组的最大和：
+例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最
+大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的和，你会不会被他忽悠住？(子向量的长度至少是1)
+</h3>
+
+
+```
+public class Solution {
+    public int FindGreatestSumOfSubArray(int[] array) {
+		    int max=0x80000000;
+		    int temp=0;
+	        if(array.length==0) return 0;
+	        for(int i =0;i<array.length;i++) {
+	        	if(temp<=0) {
+	        		temp =array[i];
+	        	}
+	        	else temp+=array[i];
+	        	if(temp>max) {
+	        		max=temp; 
+	        	}
+	        }
+	        return max;
+	        
+	    }
+}
+```

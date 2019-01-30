@@ -1695,6 +1695,7 @@ public class Solution {
 </h3>
 
 ```
+ASCII码长度为256位
 
 public static int FirstNotRepeatingChar(String str) {
         

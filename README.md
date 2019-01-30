@@ -1674,11 +1674,28 @@ public class Solution {
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>32.第一个只出现一次的字符
 	
 在一个字符串(0<=字符串长度<=10000，全部由字母组成)中找到第一个只出现一次的字符,并返回它的位置, 如果没有则返回 -1（需要区分大小写）.
 </h3>
+
 ```
+
 public static int FirstNotRepeatingChar(String str) {
         
 		int[] co=new int[256];
@@ -1691,8 +1708,21 @@ public static int FirstNotRepeatingChar(String str) {
 		}
         return -1;
     }
-
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1704,9 +1734,12 @@ public static int FirstNotRepeatingChar(String str) {
 
 <h3>0：反转数字</h3>
 
+
+
 举例：
 Input: 123
 Output: 321
+
 ```
 public int reverse(int x) {
         long rev = 0; 
@@ -1717,5 +1750,6 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
     }
+
 
 ```

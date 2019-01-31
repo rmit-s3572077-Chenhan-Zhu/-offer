@@ -1863,10 +1863,23 @@ public class Solution {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <h3>35：二叉树的深度
 输入一棵二叉树，求该树的深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
 </h3>
+
+
 ```
 递归
 public int TreeDepth(TreeNode root) {
@@ -1905,7 +1918,26 @@ public class Solution {
         return depth;
     }
 }
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1914,6 +1946,7 @@ public class Solution {
 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
 
 </h3
+
 ```
 方法一：
 最直接的做法，遍历每个结点，借助一个获取树深度的递归函数，
@@ -1951,7 +1984,31 @@ public classSolution {
         if (right == -1) return -1;
         return Math.abs(left - right) > 1 ? -1 : 1 + Math.max(left, right);
     }
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1966,8 +2023,8 @@ public classSolution {
 举例：
 Input: 123
 Output: 321
-
 ```
+
 public int reverse(int x) {
         long rev = 0; 
         while (x != 0) {
@@ -1977,7 +2034,6 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
     }
-
 
 ```
 

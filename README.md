@@ -1718,6 +1718,148 @@ public static int FirstNotRepeatingChar(String str) {
 
 
 
+<h3>33.两个链表的第一个公共节点
+	
+输入两个链表，找出它们的第一个公共结点。
+</h3>
+
+
+```
+找出2个链表的长度，然后让长的先走两个链表的长度差，然后再一起走
+（因为2个链表用公共的尾部）
+public ListNode FindFirstCommonNodeII(ListNode pHead1, ListNode pHead2) {
+        ListNode current1 = pHead1;// 链表1
+        ListNode current2 = pHead2;// 链表2
+        if (pHead1 == null || pHead2 == null)
+            return null;
+        int length1 = getLength(current1);
+        int length2 = getLength(current2);
+        // 两连表的长度差
+         
+        // 如果链表1的长度大于链表2的长度
+        if (length1 > length2) {
+            int len = length1 - length2;
+            // 先遍历链表1，遍历的长度就是两链表的长度差
+            while (len > 0) {
+                current1 = current1.next;
+                len--;
+            }
+ 
+        }
+        // 如果链表2的长度大于链表1的长度
+        else if (length1 < length2) {
+            int len = length2 - length1;
+            // 先遍历链表1，遍历的长度就是两链表的长度差
+            while (len > 0) {
+                current2 = current2.next;
+                len--;
+            }
+ 
+        }
+        //开始齐头并进，直到找到第一个公共结点
+        while(current1!=current2){
+            current1=current1.next;
+            current2=current2.next;
+        }
+        return current1;
+ 
+    }
+ 
+    // 求指定链表的长度
+    public static int getLength(ListNode pHead) {
+        int length = 0;
+ 
+        ListNode current = pHead;
+        while (current != null) {
+            length++;
+            current = current.next;
+        }
+        return length;
+    }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>34.数字在排序数组中出现的次数
+统计一个数字在排序数组中出现的次数。
+
+</h3>
+```
+
+public class Solution {
+        public  int GetNumberOfK(int[] array,int k){
+        if(array==null||array.length==0)
+            return 0;
+        int first=getFirstK(array,k,0,array.length-1);
+        int last=getLastK(array,k,0,array.length-1);
+        if(first==-1 ||last==-1){
+            return 0;
+        }
+        else{
+            return last-first+1;
+        }
+         
+    }
+     
+    public  int getFirstK(int[] array,int k,int start,int end){
+        while(start<=end){
+            int mid=(start+end)/2;
+            if(k<array[mid])
+                end=mid-1;
+            else if(k>array[mid])
+                start=mid+1;
+            else{
+                if((mid>0&&array[mid-1]!=k)||mid==0)
+                    return mid;
+                else{
+                    end=mid-1;
+                }
+            }
+        }
+        return -1;
+    }
+     
+    public  int getLastK(int[] array,int k ,int start,int end){
+        while(start<=end){
+            int mid=(start+end)/2;
+            if(k<array[mid])
+                end=mid-1;
+            else if(k>array[mid])
+                start=mid+1;
+            else{
+                if((mid<array.length-1&&array[mid+1]!=k)||mid==array.length-1)
+                    return mid;
+                else{
+                    start=mid+1;
+                }
+            }
+        }
+        return -1;
+    }
+}
+```
+
+
+
+
 
 
 
@@ -1754,3 +1896,8 @@ public int reverse(int x) {
 
 
 ```
+
+
+
+
+

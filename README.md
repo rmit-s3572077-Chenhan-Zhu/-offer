@@ -2027,11 +2027,25 @@ public classSolution {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>0：反转数字</h3>
+
+```
 举例：
 Input: 123
 Output: 321
-```
 
 public int reverse(int x) {
         long rev = 0; 

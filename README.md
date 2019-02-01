@@ -1802,8 +1802,8 @@ public ListNode FindFirstCommonNodeII(ListNode pHead1, ListNode pHead2) {
 统计一个数字在排序数组中出现的次数。
 
 </h3>
-```
 
+```
 public class Solution {
         public  int GetNumberOfK(int[] array,int k){
         if(array==null||array.length==0)
@@ -1874,6 +1874,12 @@ public class Solution {
 
 
 
+
+
+
+
+
+
 <h3>35：二叉树的深度
 输入一棵二叉树，求该树的深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
@@ -1918,8 +1924,12 @@ public class Solution {
         return depth;
     }
 }
-
 ```
+
+
+
+
+
 
 
 
@@ -2016,10 +2026,8 @@ public classSolution {
 
 
 
+
 <h3>0：反转数字</h3>
-
-
-
 举例：
 Input: 123
 Output: 321
@@ -2034,7 +2042,6 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
     }
-
 ```
 
 

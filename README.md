@@ -191,6 +191,7 @@ public class Solution {
          
         for(int i=startIn;i<=endIn;i++)
             if(in[i]==pre[startPre]){
+	    //i代表中序遍历的根节点，i-startin指的是左子树的长度
                 root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1);
                 root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn);
                       break;
@@ -199,6 +200,8 @@ public class Solution {
         return root;
     }
 }
+
+https://blog.csdn.net/Yeoman92/article/details/77868367
 ```
 
 

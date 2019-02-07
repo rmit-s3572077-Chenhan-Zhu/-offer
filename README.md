@@ -520,17 +520,19 @@ public double Power(double base, int exponent) {
 第二种
 
 ```
-public:
-    double Power(double base, int exponent) {
-        long long p = abs((long long)exponent);
-      double r = 1.0;
-        while(p){
-            if(p & 1) r *= base;
-            base *= base;
-            p >>= 1;
+public double Power(double base, int exponent) {
+	      
+        double res =1;
+        int p = Math.abs(exponent);
+        while(p!=0) {
+        	if((p&1)==1) {
+        		res=base*res;  //如果二进制当前位等于1，就获得值；
+        	}
+        	base*=base; //最后一位base,倒数第二位base^2,倒3 base^4;
+        	p=p>>1; //每次指数右移一位，直到为0
         }
-        return exponent < 0 ? 1/ r : r;
-    }
+        return exponent>0?res:1/res;
+	  }
 ```
 
 

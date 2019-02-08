@@ -955,13 +955,14 @@ while(curR!=rowStart) {
 
 ```
 
+https://blog.csdn.net/u013132035/article/details/80603691
 
 import java.util.Stack;
 
 public class Solution {
 	Stack<Integer> stack1 =new Stack<Integer>();
 	Stack<Integer> stack2 =new Stack<Integer>();
-    
+    //stack2为辅助栈，用来存储最小值
     public void push(int node) {
 	        stack1.push(node);
 	        if(stack2.isEmpty()) {
@@ -969,6 +970,7 @@ public class Solution {
 	        	
 	        }
 	        else {
+		//栈顶是最后进入的数
 	        	int temp =stack2.peek();
 	        	stack2.push(temp>node?node:temp);
 	        }

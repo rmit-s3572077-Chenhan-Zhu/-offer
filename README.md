@@ -1913,7 +1913,7 @@ public class Solution {
 
 
 
-<h3>35：二叉树的深度
+<h3>35：二叉树的最大深度
 输入一棵二叉树，求该树的深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
 </h3>
@@ -1965,6 +1965,52 @@ public class Solution {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>36：二叉树的最小深度
+输入一棵二叉树，求该树的最小深度。
+从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
+</h3>
+
+//方法和找最大深度一样
+只需要判断如果左右儿子中有空结点，则返回非空结点的儿子的高度+1
+最大深度则不需要考虑空结点的问题啦~
+```
+public int minDepth(treenode root){
+	if(root==null) return 0;
+	if(root.left==null) return minDepth(root.right)+1;
+	else if(root.right==null) return minDepth(root.left)+1;
+	return Math.Min(minDepth(root.left),minDepth(root.right))+1;
+
+
+}
+```
 
 
 

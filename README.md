@@ -570,20 +570,25 @@ public static void reOrderArray(int [] array) {
     }
     
     
-冒泡排序：
+快速排序：
 
-public class Solution {
-    public void reOrderArray(int [] array) {
-        for(int i=0;i<array.length-1;i++)
-            for(int j=0;j<array.length-i-1;j++){
-                if(array[j]%2==0 && array[j+1]%2==1){
-                    int temp=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=temp;
-                }
-            }
+ public void reOrderArray(int [] array) {
+	 int left = 0;
+	    int right = array.length-1;
+	    while(left<right){
+	        while(left<right && (array[left]&1)==1)//使用位运算判断奇偶
+	            left++;//arr[left]为奇数，自增直至为偶数为止
+	        while(left<right && (array[right]&1)!=1)
+	            right--;//arr[right]为偶数，自减直至为奇数为止
+	        //arr[left]为偶数，arr[right]为奇数，交换
+	        if(left<right){
+	            int temp = array[left];
+	            array[left] = array[right];
+	            array[right] = temp;
+	        }
+	    }
+	
     }
-}
 ```
 
 

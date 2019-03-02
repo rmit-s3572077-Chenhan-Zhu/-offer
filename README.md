@@ -2090,11 +2090,10 @@ public class Solution {
 输入一棵二叉树，求该树的最小深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
 </h3>
+```
 //方法和找最大深度一样
 只需要判断如果左右儿子中有空结点，则返回非空结点的儿子的高度+1
 最大深度则不需要考虑空结点的问题啦~
-
-```
 public int minDepth(treenode root){
 	if(root==null) return 0;
 	if(root.left==null) return minDepth(root.right)+1;
@@ -2173,6 +2172,7 @@ public classSolution {
 
 
 <h3>0：反转数字</h3>
+
 ```
 举例：
 Input: 123
@@ -2186,4 +2186,5 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
 }
+
 ```

@@ -2226,10 +2226,11 @@ public classSolution {
 
 
 <h3>0：反转数字</h3>
-```
 举例：
 Input: 123
 Output: 321
+
+```
 public int reverse(int x) {
         long rev = 0; 
         while (x != 0) {
@@ -2239,5 +2240,4 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
 }
-
 ```

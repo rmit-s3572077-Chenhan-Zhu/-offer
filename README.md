@@ -2117,10 +2117,23 @@ public int minDepth(treenode root){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>36：判断平衡二叉树
 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
 </h3>
-
 ```
 方法一：
 最直接的做法，遍历每个结点，借助一个获取树深度的递归函数，
@@ -2155,7 +2168,30 @@ public classSolution {
         if (right == -1) return -1;
         return Math.abs(left - right) > 1 ? -1 : 1 + Math.max(left, right);
     }
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2172,7 +2208,6 @@ public classSolution {
 
 
 <h3>0：反转数字</h3>
-
 ```
 举例：
 Input: 123
@@ -2186,5 +2221,4 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
 }
-
 ```

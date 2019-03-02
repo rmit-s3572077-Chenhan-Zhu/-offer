@@ -2208,6 +2208,23 @@ public classSolution {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>0：反转数字</h3>
 ```
 举例：
@@ -2222,4 +2239,5 @@ public int reverse(int x) {
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
 }
+
 ```

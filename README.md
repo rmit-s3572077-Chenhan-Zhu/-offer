@@ -1587,6 +1587,7 @@ public class Solution {
 例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最
 大和为8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的和，你会不会被他忽悠住？(子向量的长度至少是1)
 </h3>
+
 ```
 
 public class Solution {
@@ -1628,6 +1629,7 @@ public class Solution {
 求出1~13的整数中1出现的次数,并算出100~1300的整数中1出现的次数？为此他特别数了一下1~13中包含1的
 数字有1、10、11、12、13因此共出现6次,但是对于后面问题他就没辙了。ACMer希望你们帮帮他,并把问题更加
 普遍化,可以很快的求出任意非负整数区间中1出现的次数（从1 到 n 中1出现的次数）。
+
 ```
 public class Solution {
       public static int NumberOf1Between1AndN_Solution(int n) {
@@ -1651,6 +1653,7 @@ public class Solution {
 		 	return count;
 	    }
 }
+
 ```
 
 
@@ -1675,6 +1678,7 @@ public class Solution {
 
 <h3>30: 把数组排成最小的数字，输入一个正整数数组，把数组里所有数字拼接起来排成一个数，
 打印能拼接出的所有数字中最小的一个。例如输入数组{3，32，321}，则打印出这三个数字能排成的最小数字为321323。</h3>
+
 ```
 public class Solution {
     public String PrintMinNumber(int [] numbers) {
@@ -1699,8 +1703,7 @@ public class Solution {
    s+=j;
   }
         return s;
-    }
-}
+    }}
 ```
 
 
@@ -1746,7 +1749,6 @@ public class Solution {
     }
 }
 ```
-
 
 
 
@@ -2009,7 +2011,6 @@ public class Solution {
 
 
 
-
 <h3>35：二叉树的最大深度
 输入一棵二叉树，求该树的深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
@@ -2101,7 +2102,6 @@ public int minDepth(treenode root){
 
 
 
-
 <h3>36：判断平衡二叉树
 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
 </h3>
@@ -2139,6 +2139,7 @@ public classSolution {
         if (right == -1) return -1;
         return Math.abs(left - right) > 1 ? -1 : 1 + Math.max(left, right);
     }
+
 ```
 
 
@@ -2168,5 +2169,5 @@ public int reverse(int x) {
         }
         if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE) return 0;
         return (int) rev;
-    }
+}
 ```

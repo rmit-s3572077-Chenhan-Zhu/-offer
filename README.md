@@ -1783,6 +1783,7 @@ public class Solution {
 	
 在一个字符串(0<=字符串长度<=10000，全部由字母组成)中找到第一个只出现一次的字符,并返回它的位置, 如果没有则返回 -1（需要区分大小写）.
 </h3>
+
 ```
 ASCII码长度为256位
 public static int FirstNotRepeatingChar(String str) {
@@ -1797,6 +1798,7 @@ public static int FirstNotRepeatingChar(String str) {
 		}
         return -1;
     }
+
 ```
 
 
@@ -1828,6 +1830,8 @@ public static int FirstNotRepeatingChar(String str) {
 	
 输入两个链表，找出它们的第一个公共结点。
 </h3>
+
+
 ```
 找出2个链表的长度，然后让长的先走两个链表的长度差，然后再一起走
 （因为2个链表用公共的尾部）
@@ -1918,6 +1922,7 @@ public:
         return pHead1;
     }
 };    
+
 ```
 
 
@@ -1945,6 +1950,7 @@ public:
 <h3>34.数字在排序数组中出现的次数
 统计一个数字在排序数组中出现的次数。
 </h3>
+
 ```
 public class Solution {
         public  int GetNumberOfK(int[] array,int k){
@@ -1997,6 +2003,7 @@ public class Solution {
         return -1;
     }
 }
+
 ```
 
 
@@ -2020,6 +2027,7 @@ public class Solution {
 输入一棵二叉树，求该树的深度。
 从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
 </h3>
+
 ```
 递归
 public int TreeDepth(TreeNode root) {
@@ -2057,6 +2065,7 @@ public class Solution {
         return depth;
     }
 }
+
 ```
 	
 	
@@ -2084,6 +2093,7 @@ public class Solution {
 //方法和找最大深度一样
 只需要判断如果左右儿子中有空结点，则返回非空结点的儿子的高度+1
 最大深度则不需要考虑空结点的问题啦~
+
 ```
 public int minDepth(treenode root){
 	if(root==null) return 0;
@@ -2091,6 +2101,7 @@ public int minDepth(treenode root){
 	else if(root.right==null) return minDepth(root.left)+1;
 	return Math.Min(minDepth(root.left),minDepth(root.right))+1;
 }
+
 ```
 
 
@@ -2110,6 +2121,7 @@ public int minDepth(treenode root){
 <h3>36：判断平衡二叉树
 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
 </h3>
+
 ```
 方法一：
 最直接的做法，遍历每个结点，借助一个获取树深度的递归函数，
@@ -2144,7 +2156,6 @@ public classSolution {
         if (right == -1) return -1;
         return Math.abs(left - right) > 1 ? -1 : 1 + Math.max(left, right);
     }
-
 ```
 
 
